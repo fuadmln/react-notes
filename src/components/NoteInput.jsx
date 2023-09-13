@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const NoteInput = () => {
+const NoteInput = ({setNotes}) => {
     const [formData, setFormData] = useState({title: '', body: ''});
 
     const changeTitleHandler = (e) => {
@@ -15,7 +15,14 @@ const NoteInput = () => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        console.log(formData);
+        const newNote = {
+            ...formData,
+            id: +new Date(),
+            archived: false,
+            createdAt: new Date().toISOString()
+        }
+        
+        setNotes( notes => [...notes, newNote] );
         setFormData({title: '', body: ''});
     }
 
