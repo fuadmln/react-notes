@@ -1,6 +1,11 @@
+import { useState } from "react";
+
 const Header = ({notes, setFilteredNotes}) =>{
+    const [keyword, setKeyword] = useState('');
+
     const changeSearchHandler = (e) => {
-        console.log(typeof e.target.value);
+        setKeyword(e.target.value);
+        
         setFilteredNotes(() => {
             return notes.filter(note => note.title.toLowerCase().includes(e.target.value));
         });
@@ -10,7 +15,7 @@ const Header = ({notes, setFilteredNotes}) =>{
         <header className="note-app__header">
             <h1>Notes App</h1>
             <div className="note-search">
-                <input type="text" placeholder="Cari catatan..." onChange={changeSearchHandler} />
+                <input type="text" placeholder="Cari catatan..." value={keyword} onChange={changeSearchHandler} />
             </div>
         </header>
     );
