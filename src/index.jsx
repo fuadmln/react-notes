@@ -1,8 +1,14 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import Header from './components/Header';
 
-// import style
 import './styles/style.css';
 
+function NotesApp(){
+    return(
+        <Header />
+    );
+}
+
 const root = createRoot(document.getElementById('root'));
-root.render(<h1>Hello, World!</h1>);
+root.render(<NotesApp />);
