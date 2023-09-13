@@ -1,10 +1,8 @@
 import NoteInput from './NoteInput';
 import NotesList from './NotesList';
-import {getInitialData} from '../utils';
-import { useState } from "react";
 
-const Main = () => {
-    const [notes, setNotes] = useState(() => getInitialData());
+const Main = ({notes, setNotes}) => {
+    
     
     return (
         <div className="note-app__body">

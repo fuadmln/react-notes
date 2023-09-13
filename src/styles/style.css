@@ -10,15 +10,6 @@ body {
   color: white;
 }
 
-body header {
-  padding: 32px 50px;
-  border-bottom: 1px solid #aaa;
-}
-
-body header h1 {
-  font-size: 2.5rem;
-}
-
 input,
 textarea {
   padding: 12px;
