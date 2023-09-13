@@ -25,7 +25,9 @@ const Note = ({note, setNotes}) => {
             </div>
             <div className="note-item__action">
                 <button className="note-item__delete-button" onClick={ () => {deleteHandler(note.id)}}>Delete</button>
-                <button className="note-item__archive-button" onClick={() => {archiveHandler(note.id)}}>Arsipkan</button>
+                <button className="note-item__archive-button" onClick={() => {archiveHandler(note.id)}}>
+                    {note.archived ? 'Pindahkan' : 'Arsipkan'}
+                </button>
             </div>
         </div>
     );
