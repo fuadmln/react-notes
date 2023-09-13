@@ -9,13 +9,15 @@ import './styles/style.css';
 
 function NotesApp(){
     const [notes, setNotes] = useState(() => getInitialData());
-    const [filteredNotes, setFilteredNotes] = useState([]);
+    const [search, setSearch] = useState('');
 
-    const currentNotes = filteredNotes.length == 0 ? notes : filteredNotes;
+    const currentNotes = search 
+        ? notes.filter(note => note.title.toLowerCase().includes(search))
+        : notes;
 
     return(
         <>
-        <Header notes={notes} setFilteredNotes={setFilteredNotes} />
+        <Header setSearch={setSearch} />
         <Main notes={ currentNotes } setNotes={setNotes} />
         </>
     );

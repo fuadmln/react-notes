@@ -1,14 +1,11 @@
 import { useState } from "react";
 
-const Header = ({notes, setFilteredNotes}) =>{
+const Header = ({setSearch}) =>{
     const [keyword, setKeyword] = useState('');
 
     const changeSearchHandler = (e) => {
         setKeyword(e.target.value);
-        
-        setFilteredNotes(() => {
-            return notes.filter(note => note.title.toLowerCase().includes(e.target.value));
-        });
+        setSearch(e.target.value);
     }
 
     return (
