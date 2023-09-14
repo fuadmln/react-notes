@@ -33,6 +33,7 @@ textarea::placeholder {
   justify-content: center;
   padding: 4px 16px;
   border-bottom: 1px solid #aaa;
+  background-color: #1c1c1f;
 }
 
 .note-app__header h1 {
@@ -166,6 +167,27 @@ textarea::placeholder {
 
 .note-item__delete-button:hover {
   color: #b00020;
+}
+
+.note-app__footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 120px;
+  border-top: 1px solid #aaa;
+  background-color: #1c1c1f;
+}
+
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.note-app__footer p {
+  display: inline;
+  font-size: 14px;
+  color: #777;
 }
 
 @media only screen and (min-width: 500px) {

@@ -2,6 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import Header from './components/Header';
 import Main from './components/Main';
+import Footer from './components/Footer';
 import {getInitialData} from './utils';
 import { useState } from "react";
 
@@ -17,8 +18,9 @@ function NotesApp(){
 
     return(
         <>
-        <Header setSearch={setSearch} />
-        <Main notes={ currentNotes } setNotes={setNotes} />
+            <Header setSearch={setSearch} />
+            <Main notes={ currentNotes } setNotes={setNotes} />
+            <Footer />
         </>
     );
 }
