@@ -13,7 +13,7 @@ function NotesApp(){
     const [search, setSearch] = useState('');
 
     const currentNotes = search 
-        ? notes.filter(note => note.title.toLowerCase().includes(search))
+        ? notes.filter(note => note.title.toLowerCase().includes(search.toLowerCase()))
         : notes;
 
     return(
