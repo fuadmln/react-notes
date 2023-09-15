@@ -7,7 +7,7 @@ Submission proyek aplikasi pengelola Notes menggunakan React dari kelas [Dicodin
 [Source Code Repository](https://github.com/fuadmln/react-notes)<br>
 [Demo](https://react-notes-f8480.web.app)
 
-## Project Criteria
+## Kriteria Proyek
 
 1. Mampu Menampilkan Daftar Catatan
 1. Mampu Menambahkan Catatan
